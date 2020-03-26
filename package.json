@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node ./src/server.ts",
-    "test": "jest",
+    "start": "./node_modules/.bin/ts-node ./src/server.ts",
+    "watch": "./node_modules/.bin/tsc -w",
+    "compile": "./node_modules/.bin/tsc",
+    "test": "./node_modules/.bin/jest",
+    "test-coverage": "./node_modules/.bin/jest --coverage",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts . --fix"
   },
