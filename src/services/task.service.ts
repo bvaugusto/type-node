@@ -2,7 +2,6 @@ import { Request, Response } from "express";
 import TaskModel, { ITask, ITaskObj } from "../models/task.models";
 
 export default class TaskService {
-
   public async findAll(req: Request, res: Response) {
     try {
       const list: Array<ITaskObj> = await TaskModel.find({});
