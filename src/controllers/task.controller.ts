@@ -13,7 +13,8 @@ export default class TaskController {
   }
 
   public setupRoutes() {
-    this.router.get(`${this.path}`, this.taskService.routeDefault);
+    this.router.get(`${this.path}`, this.taskService.findAll);
     this.router.post(`${this.path}`, this.taskService.create);
+    this.router.get(`${this.path}/:id`, this.taskService.findOne);
   }
 }

@@ -4,6 +4,11 @@ export interface ITask extends Document {
   title: string;
 }
 
+export interface ITaskObj extends Document {
+  _id: string;
+  title: string;
+}
+
 const TaskSchema: Schema = new Schema({
   title: String,
 });
