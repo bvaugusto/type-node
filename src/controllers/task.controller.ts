@@ -2,18 +2,18 @@ import * as express from "express";
 import TaskService from "../services/task.service";
 
 export default class TaskController {
-    public router = express.Router();
-    public path = '/tasks';
-    
-    private taskService: TaskService;
+  public router = express.Router();
+  public path = "/tasks";
 
-    constructor() {
-        this.taskService = new TaskService();
-        this.setupRoutes();
-    }
+  private taskService: TaskService;
 
-    public setupRoutes() {
-        this.router.get(`${this.path}`, this.taskService.routeDefault);
-        this.router.post(`${this.path}`, this.taskService.create);
-    }
+  constructor() {
+    this.taskService = new TaskService();
+    this.setupRoutes();
+  }
+
+  public setupRoutes() {
+    this.router.get(`${this.path}`, this.taskService.routeDefault);
+    this.router.post(`${this.path}`, this.taskService.create);
+  }
 }

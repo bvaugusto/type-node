@@ -1,11 +1,11 @@
 import mongoose, { Schema, Document, mongo } from "mongoose";
 
 export interface ITask extends Document {
-    title: String
-};
+  title: string;
+}
 
 const TaskSchema: Schema = new Schema({
-    title: String
+  title: String,
 });
 
-export default mongoose.model<ITask>('Task', TaskSchema);
+export default mongoose.model<ITask>("Task", TaskSchema);
